@@ -16,7 +16,7 @@ const quokka = { isAwesome: true };
 console.log(quokka);
 
 // See the value of a variable simply by typing its name
-quokka;
+quokka; 
 
 // Use sequence expression to compare objects
 const wallaby = { "is Quokka's BigBrother": true };
