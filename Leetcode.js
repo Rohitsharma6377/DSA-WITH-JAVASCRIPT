@@ -30,3 +30,12 @@
    
    
 }}
+
+
+// minimiumVal function /
+const minimiumVal = (x,y) => {
+    // console.log(x>y:"y is minimium " ? "x is minimiume");
+    console.log(x > y ? `${y} is minimum `: `${x} is minimum`);
+};
+
+minimiumVal(1,2);
