@@ -109,3 +109,28 @@ const sum = (a) =>{
 };
 
 sum(11);
+
+//multiplation
+
+
+
+const multiple= (n)=>{
+    for (let i = 0;  i <= 10; i++){
+        let table = n*i
+        console.log(table);
+    }
+};
+
+multiple(3);
+
+// sum of total 
+
+const sum=(A) => {
+    let total = 0;
+    for (let i = 2; i <= A; i += 2) {
+        total += i;
+    }
+    console.log(total);
+};
+
+sum(4);
