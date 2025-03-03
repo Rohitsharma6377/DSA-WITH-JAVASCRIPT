@@ -133,4 +133,4 @@ const sum=(A) => {
     console.log(total);
 };
 
-sum(4);
+sum(4);   
