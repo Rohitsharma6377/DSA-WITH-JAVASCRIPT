@@ -146,3 +146,32 @@ function remove(n){
 };
 
 console.log(remove(3423));
+
+
+// reverse the number
+function reversenum(num){
+    let reversed = 0;
+    
+    while (num > 0){
+        let lastdigit = num % 10;
+        reversed = (reversed * 10) +lastdigit;
+        num = (num - lastdigit) / 10;
+    }
+    return reversed;
+};
+
+console.log(reversenum(12345))
+
+
+//total the all digit 
+function total(n){
+    let sum = 0;
+    while (n > 0){
+    let lastdigit = n%10;
+    sum = sum +lastdigit;
+        n = (n-lastdigit)/10;
+    }
+    console.log(sum);    
+};
+
+total(23);
