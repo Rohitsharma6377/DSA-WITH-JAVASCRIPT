@@ -134,3 +134,15 @@ const sum=(A) => {
 };
 
 sum(4);   
+
+
+
+// remove on enumber 
+function remove(n){
+    let val = n % 10;
+    console.log(val);
+    let cal = (n - val) / 10;
+    console.log(cal);
+};
+
+console.log(remove(3423));
