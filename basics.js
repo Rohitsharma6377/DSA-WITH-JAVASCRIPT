@@ -175,4 +175,12 @@ function total(n){
 };
 
 total(23);
- 
+//  sequar of an number
+// \are of sewuar
+
+function areaSquar(n){
+    let are = n*n;
+    console.log(are);
+};
+
+areaSquar(2);
