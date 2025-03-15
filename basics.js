@@ -184,3 +184,11 @@ function areaSquar(n){
 };
 
 areaSquar(2);
+
+// even odd
+function oddeven(n){
+    console.log(n%2? "odd":"even");
+    
+}
+oddeven(5);
+
