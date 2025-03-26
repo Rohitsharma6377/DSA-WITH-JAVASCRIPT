@@ -168,5 +168,57 @@ const checkTypeOfAlphabat=(str)=>{
        }
    }
  checkTypeOfAlphabat("rohit    ");
- 
 
+//// revres a string 
+const revers_String = (str) => {
+    let reversed  = "";
+   for(let i = str.length -1 ; i >=0; i--){
+       reversed +=str[i];
+   }
+   console.log(reversed);
+};
+
+
+revers_String("rohit");
+
+// is palindrome or not 
+const isPalindrom = (str) =>{
+    for(let i =0 ; i < str.length /2 ; i++){
+        if(str[i] !== str[(str.length - 1 )-i]){
+            return false;
+        };
+    };
+       return true
+       
+   }
+   console.log(isPalindrom("ab"))
+
+
+//    Find the First Non-Repeating Character
+//    Problem: Given a string, find the first character that does not repeat.
+//    Example:
+//    Input: "aabbccdeff"
+//    Output: "d"   
+
+function firstNonRepeatingChar(str) {
+    let count = {}; 
+
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+        if (!count[char]) {
+            count[char] = 1;
+        } else {
+            count[char]++;
+        }
+    }
+
+    for (let i = 0; i < str.length; i++) {
+        if (count[str[i]] === 1) {
+            return str[i]; 
+        }
+    }
+
+    return null; 
+}
+
+console.log(firstNonRepeatingChar("racecar")); 
