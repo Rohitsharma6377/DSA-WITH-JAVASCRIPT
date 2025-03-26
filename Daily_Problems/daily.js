@@ -86,3 +86,87 @@ const findSubstring = (str)=>{
 }
 
 findSubstring("abc");
+
+
+// Check if One String is a Substring of Another
+// Problem: Given two strings s1 and s2, check if s2 is a substring of s1.
+// Example:
+// Input: s1 = "hello world", s2 = "world"
+// Output: True
+
+const matchSubstring = (str1,str2)=>{
+  
+    let len2= str2.length;
+    let len1= str1.length;
+    if (len1 <= len2)
+    return false
+    for(i = 0 ; i < len1 -len2 ; i++){
+        let j =0;
+        for (j=0; j <len2;j++){
+            if(str1[i+j]=! str2[i+j]){
+                break 
+            }else{
+                console.log(true);
+            }
+        }
+    }
+    
+    }
+  matchSubstring("hello world", "world");
+
+
+
+
+// find palindorme from input string
+  
+const findSubstring = (str) => {
+    let result = [];
+    
+    for (let i = 0; i < str.length; i++) {
+        for (let j = i + 1; j <= str.length; j++) {
+            let substring = str.substring(i, j);
+
+            // Check if the substring is a palindrome
+            if (isPalindrome(substring) && substring.length > 1) {
+                console.log(substring);
+                result.push(substring);
+            }
+        }
+    }
+
+    return result;
+};
+
+// Example Usage
+findSubstring("babad");
+
+// check how many vowels and constant in string
+const checkTypeOfAlphabat=(str)=>{
+    let vowels="aeiouAEIOU";
+    
+    vowelsCount = 0; consonantCount=0;
+    for(let i=0 ; i <str.length; i++){
+        let char = str[i];
+      if ((char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z')) {
+             if (isVowel(char, vowels)) {
+                 vowelsCount++;
+             } else {
+                 consonantCount++;
+             }
+         }
+    }
+        console.log("vowelsCountes - " , vowelsCount )
+        console.log("Constants Counts - " , consonantCount )
+    
+     
+ }
+   const isVowel = (char ,vowels)=>{
+       for (i=0; i <vowels.length; i++){
+           if(char === vowels[i]){
+               return true;
+           }
+       }
+   }
+ checkTypeOfAlphabat("rohit    ");
+ 
+
