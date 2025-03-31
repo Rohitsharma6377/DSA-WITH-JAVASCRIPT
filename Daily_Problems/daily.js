@@ -222,3 +222,23 @@ function firstNonRepeatingChar(str) {
 }
 
 console.log(firstNonRepeatingChar("racecar")); 
+
+
+//sum of natual number using for loops
+
+const sumNumbers = (N) =>{
+    let sum = 0;
+    for(i=0; i <= N; i++){
+       sum += i;
+    };
+       console.log(sum);
+};
+
+sumNumbers(10);
+
+// sum of natural number using while loop;
+
+const sumNumber = (N) => {
+    let Total = 0;
+    
+}
