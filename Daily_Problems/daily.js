@@ -242,3 +242,129 @@ const sumNumber = (N) => {
     let Total = 0;
     
 }
+ 
+// capitlize string first latter
+function capitalizeWords(sentence) {
+    let result = "";  
+    let capitalizeNext = true;  
+
+    for (let i = 0; i < sentence.length; i++) {
+        let char = sentence[i];
+
+        if (capitalizeNext && char >= 'a' && char <= 'z') {
+            result += String.fromCharCode(char.charCodeAt(0) - 32);
+        } else {
+            result += char;
+        }
+
+        capitalizeNext = (char === ' ');
+    }
+
+    return result;
+}
+
+const sentence = "hello world! this is javascript.";
+console.log(capitalizeWords(sentence));  
+
+//find longest word
+
+function findLongestWord(sentence) {
+    let longestWord = "";
+    let currentWord = "";
+    
+    for (let i = 0; i < sentence.length; i++) {
+        let char = sentence[i];
+
+        // If character is a letter, add to current word
+        if ((char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z')) {
+            currentWord += char;
+        } else {
+            // Compare and reset current word if space or punctuation is found
+            if (currentWord.length > longestWord.length) {
+                longestWord = currentWord;
+            }
+            currentWord = ""; // Reset for next word
+        }
+    }
+    
+    if (currentWord.length > longestWord.length) {
+        longestWord = currentWord;
+    }
+
+    return longestWord;
+}
+
+// Example usage:
+const sentence = "The quick brown fox jumped over the lazy dog!";
+console.log(findLongestWord(sentence));  
+// Output: "jumped"
+
+
+//stringtointerger
+function stringToInteger(str) {
+    let num = 0;
+    let isNegative = false;
+    let startIndex = 0;
+
+    if (str[0] === '-') {
+        isNegative = true;
+        startIndex = 1; 
+    }
+
+    for (let i = startIndex; i < str.length; i++) {
+        let digit = str[i].charCodeAt(0) - '0'.charCodeAt(0);
+        num = num * 10 + digit;
+    }
+
+    return isNegative ? -num : num;
+}
+
+// Example usage:
+console.log(stringToInteger("1234"));   
+console.log(stringToInteger("-5678"));
+
+
+function isSubstring(s1, s2) {
+    let len1 = s1.length;
+    let len2 = s2.length;
+
+    if (len2 > len1) return false; 
+
+    for (let i = 0; i <= len1 - len2; i++) {
+        let match = true;
+        
+        for (let j = 0; j < len2; j++) {
+            if (s1[i + j] !== s2[j]) {
+                match = false;
+                break;
+            }
+        }
+
+        if (match) return true; 
+    }
+
+    return false; // No match found
+}
+
+console.log(isSubstring("hello world", "world"));  
+console.log(isSubstring("javascript", "script")); 
+console.log(isSubstring("abcdef", "gh"));         
+
+
+//find all sub string
+
+function findAllSubstrings(str) {
+    let length = str.length;
+
+    for (let start = 0; start < length; start++) {
+        let substring = ""; 
+
+        for (let end = start; end < length; end++) {
+            substring += str[end]; 
+            console.log(substring);
+        }
+    }
+}
+
+// Example usage:
+findAllSubstrings("abc");
