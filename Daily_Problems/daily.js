@@ -126,7 +126,7 @@ const findSubstring = (str) => {
         for (let j = i + 1; j <= str.length; j++) {
             let substring = str.substring(i, j);
 
-            // Check if the substring is a palindrome
+            //  if the substring is a palindrome
             if (isPalindrome(substring) && substring.length > 1) {
                 console.log(substring);
                 result.push(substring);
@@ -275,15 +275,15 @@ function findLongestWord(sentence) {
     for (let i = 0; i < sentence.length; i++) {
         let char = sentence[i];
 
-        // If character is a letter, add to current word
+        // if character is a letter add to current word
         if ((char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z')) {
             currentWord += char;
         } else {
-            // Compare and reset current word if space or punctuation is found
+            // compare and reset current word if space or punctuation is found
             if (currentWord.length > longestWord.length) {
                 longestWord = currentWord;
             }
-            currentWord = ""; // Reset for next word
+            currentWord = ""; // reset for next word
         }
     }
     
@@ -294,14 +294,12 @@ function findLongestWord(sentence) {
     return longestWord;
 }
 
-// Example usage:
 const sentence = "The quick brown fox jumped over the lazy dog!";
-console.log(findLongestWord(sentence));  
-// Output: "jumped"
+console.log(findLongestWord(sentence)); 
 
 
 //stringtointerger
-function stringToInteger(str) {
+const stringToInteger =(str)=> {
     let num = 0;
     let isNegative = false;
     let startIndex = 0;
@@ -319,9 +317,6 @@ function stringToInteger(str) {
     return isNegative ? -num : num;
 }
 
-// Example usage:
-console.log(stringToInteger("1234"));   
-console.log(stringToInteger("-5678"));
 
 
 function isSubstring(s1, s2) {
@@ -346,9 +341,6 @@ function isSubstring(s1, s2) {
     return false; // No match found
 }
 
-console.log(isSubstring("hello world", "world"));  
-console.log(isSubstring("javascript", "script")); 
-console.log(isSubstring("abcdef", "gh"));         
 
 
 //find all sub string
@@ -366,5 +358,77 @@ function findAllSubstrings(str) {
     }
 }
 
-// Example usage:
 findAllSubstrings("abc");
+
+
+function stringToNumber(str) {
+    let num = 0;
+    let isNegative = false;
+    let i = 0;
+
+    // Handle negative numbers
+    if (str[0] === '-') {
+        isNegative = true;
+        i = 1;
+    }
+
+    for (; i < str.length; i++) {
+        const digit = str.charCodeAt(i) - '0'.charCodeAt(0);
+        
+        if (digit < 0 || digit > 9) {
+            console.log("Invalid input");
+            return NaN;
+        }
+
+        num = num * 10 + digit;
+    }
+
+    return isNegative ? -num : num;
+}
+
+console.log(stringToNumber("12345"));
+
+
+function removeDuplicates(str) {
+    let result = "";
+    let seen = {};
+
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+        if (!seen[char]) {
+            result += char;
+            seen[char] = true;
+        }
+    }
+
+    return result;
+}
+
+console.log(removeDuplicates("hello"));
+
+
+function mostFrequentLetter(str) {
+    let frequency = {};
+    let maxCount = 0;
+    let mostFrequent = "";
+
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+
+        // Only consider letters
+        if (/[a-zA-Z]/.test(char)) {
+            char = char.toLowerCase(); //  make case sensitive
+
+            frequency[char] = (frequency[char] || 0) + 1;
+
+            if (frequency[char] > maxCount) {
+                maxCount = frequency[char];
+                mostFrequent = char;
+            }
+        }
+    }
+
+    return mostFrequent;
+}
+
+console.log(mostFrequentLetter("hello world")); 
