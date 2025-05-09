@@ -1,6 +1,4 @@
 //remove last specific digits
-
-
 const removeDigit = (n,d)=>{
     let result = 0;
     let multiple = 1;
