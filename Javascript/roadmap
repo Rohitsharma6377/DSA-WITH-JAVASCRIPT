@@ -1,0 +1,70 @@
+Here is a complete DSA roadmap for JavaScript—covering fundamentals, core data structures, essential algorithms, and best practices for problem-solving from beginner to advanced levels.
+
+1. JavaScript & Complexity Foundations
+Master JavaScript basics: variables, data types, functions, ES6+, objects, arrays, and error handling.
+
+Learn Big O Notation: Understand time and space complexity to measure code efficiency.
+
+2. Essential Data Structures (Core with JS Implementation)
+Arrays: declaration, traversal, manipulation, built-in methods, and custom methods.
+
+Strings: manipulation, pattern problems, palindrome checks.
+
+Linked Lists: singly, doubly, circular—insert, delete, reverse (from scratch, not just built-in methods).
+
+Stacks & Queues: implement using arrays/objects, practice key applications (parentheses matching, queue reversal).
+
+Hash Tables/Maps: objects, Maps, Sets, frequency counting patterns.
+
+Trees: binary trees, binary search trees, traversal (inorder, preorder, postorder), basic operations (search, insert, delete).
+
+Graphs: adjacency list/matrix, DFS, BFS, cycle detection.
+
+3. Algorithms & Techniques (Stepwise)
+Sorting: selection, bubble, insertion, merge, quick sort (understand & implement).
+
+Searching: linear, binary search (with recursion/iteration).
+
+Recursion & Backtracking: problems like permutations, combinations, subset generation.
+
+Two Pointers & Sliding Window: classic array/string problems.
+
+Divide and Conquer: merge sort, quick sort, recursive algorithms.
+
+Dynamic Programming: memoization, tabulation, basic DP problems (fib, knapsack, coin change).
+
+Greedy Algorithms: activity selection, interval scheduling.
+
+Advanced Topics: tries, heaps/priority queues, union-find (basics), segment trees (as needed).
+
+4. Daily/Weekly Study Plan Template
+Week	Focus Area
+1	JS basics, Big O
+2	Arrays, Strings
+3	Linked Lists
+4	Stacks & Queues
+5	Hash Tables and Maps
+6	Trees
+7	Graphs
+8	Searching & Sorting
+9	Recursion & Backtracking
+10	Two pointers, Sliding
+11	Dynamic Programming
+12	Greedy, Misc/Review
+5. Problem Solving Routine
+Study new concept (30–45 min/day): tutorial + code examples.
+
+Practice 1–2 LeetCode/CodeChef problems daily.
+
+Implement custom solutions from scratch weekly.
+
+Solve previous contest/interview problems for revision.
+
+Weekly review: revisit tough topics, optimize past solutions.
+
+6. Project & Interview Prep
+Build mini-projects implementing DSA concepts: e.g., to-do list using linked list, autocomplete with trie.
+
+Focus on coding challenges, timed contests, and mock interviews.
+
+Create a DSA revision sheet (notes, code snippets, key formulas).

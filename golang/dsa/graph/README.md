@@ -1,0 +1,3 @@
+# Graphs (Go)
+
+Add BFS, DFS, shortest path, MST, and other graph algorithms here.
