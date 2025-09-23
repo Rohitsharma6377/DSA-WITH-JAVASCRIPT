@@ -56,6 +56,9 @@ const compress_string =(str)=>{
     console.log(count);
     console.log(conpress_list);
 };
-const str = "aabcca";
 
-compress_string(str)
+
+
+const Arr = [1,[2,3,[4,5],6],7]
+
+Array_change(Arr);
