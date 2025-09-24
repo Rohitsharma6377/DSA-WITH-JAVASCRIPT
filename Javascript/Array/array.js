@@ -72,3 +72,28 @@ for ( let i =0; i <arr2.length; i++){
     }
 }
     console.log(max)
+
+    //sliding window array
+    const arr3 = [1, 2, 3, 4, 5, 6, 7];
+
+    const maxSum = (arr, k) => {
+      let windowSum = 0;
+      let maxSum = 0;
+    
+      // first window ka sum
+      for (let i = 0; i < k; i++) {
+        windowSum += arr[i];
+      }
+      maxSum = windowSum;
+    
+      // slide window
+      for (let i = k; i < arr.length; i++) {
+        windowSum += arr[i] - arr[i - k]; // naya add, purana remove
+        maxSum = Math.max(maxSum, windowSum);
+      }
+    
+      return maxSum;
+    };
+    
+    console.log(maxSum(arr3, 3)); // 👉 18
+    
