@@ -1,0 +1,65 @@
+.feed{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px,1fr));
+    grid-column-gap: 16px;
+    grid-row-gap: 30px;
+    margin-top: 15px;
+    background-color: #000;
+    color: white;
+}
+.card img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+.card:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(365deg, #FFF000 96%, #ED008C 7% );
+    transform: translate3d(0px, 0px, 0) scale(1);
+    filter: blur(18px);
+    opacity: var(0.78);
+    transition: opacity 0.3s;
+    border-radius: inherit;
+}
+
+/* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property )
+*/
+.card::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+}
+        
+        
+.card h2{
+    font-size: 16px;
+    font-weight: 600;
+
+    margin: 5px 0;
+}
+.card h3{
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    margin: 6px 0;
+}
+.card p{
+    font-size: 14px;
+
+}
