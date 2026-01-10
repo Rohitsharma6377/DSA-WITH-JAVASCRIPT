@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Tasks from './pages/Tasks'
 import NotFound from './pages/NotFound'
+import Category from './pages/Category' 
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="tasks" element={<Tasks />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="category" element={<Category />} />
       </Route>
     </Routes>
   )

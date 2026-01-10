@@ -1,3 +1,4 @@
+import axios from 'axios'
 import axiosInstance from './axios'
 
 // Task API endpoints
@@ -17,7 +18,14 @@ export const userAPI = {
     getProfile: () => axiosInstance.get('/api/auth/profile'),
     updateProfile: (data) => axiosInstance.put('/api/auth/profile', data),
 }
-
+export const categoryApi = {
+    getAllcategories: () => axiosInstance.get('/api/categories'),
+    getcategoryById:(id) => axiosInstance.get(`/api/categories/${id}`),
+    createcategory:(data) => axiosInstance.post('/api/categories',data),
+    updatecategory:(id,data) => axiosInstance.put(`/api/categories/${id}`,data),
+    deletecategory:(id) => axiosInstance.delete(`/api/categories/${id}`),
+    deleteAllcategories:() => axiosInstance.delete('/api/categories'),
+}
 // Health check
 export const healthAPI = {
     check: () => axiosInstance.get('/health'),
